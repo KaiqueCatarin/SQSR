@@ -1,42 +1,46 @@
-🎮 The SQSR (Será que sou ruim? / Am I really bad?) project
-Welcome to The SQSR This is my adventure into the world of data analysis, gaming, and, well, a little bit of chaos with the Riot Games API. If you're here, you're probably as curious and excited as I am about figuring out how League of Legends players tick—and maybe how to improve your own game along the way!
+🎮 O projeto SQSR (Será que sou ruim?)
 
-🌟 What is This?
-In short, this project is all about collecting and analyzing data from League of Legends matches to help players understand their strengths, weaknesses, and everything in between. It’s a journey through data, stats, and more importantly, growth as a player.
+Bem-vindo ao SQSR! Esta é minha aventura no mundo da análise de dados, dos games e, bem, um pouco de caos com a API da Riot Games. Se você está aqui, provavelmente está tão curioso e empolgado quanto eu em descobrir como os jogadores de League of Legends funcionam — e talvez até em melhorar seu próprio jogo no processo!
 
-I started this project with a simple goal: to analyze the last 20 games of a summoner and compare their stats with higher elo benchmarks. But, as with any good project, things quickly escalated. Now, I’m diving deep into match details, storing tons of data in a SQL Server database, and learning way more than I ever expected about both coding and the game.
+🌟 O que é isso?
 
-🚀 The Journey So Far
-Data Collection: Fetching match data from the Riot Games API was the first hurdle. I’ve written scripts in Python that pull match details, store them in a SQL Server database, and keep everything organized.
+Em resumo, este projeto é sobre coletar e analisar dados das partidas de League of Legends para ajudar os jogadores a entenderem seus pontos fortes, fracos e tudo mais. É uma jornada através de dados, estatísticas e, mais importante, crescimento como jogador.
 
-Database Setup: My database now houses over 100,000 lines of match details, with a focus on Diamond league games. This is the foundation for all the analysis that follows.
+Eu comecei este projeto com um objetivo simples: analisar as últimas 20 partidas de um invocador e comparar suas estatísticas com benchmarks de elos mais altos. Mas, como qualquer bom projeto, as coisas rapidamente escalaram. Agora, estou mergulhando fundo nos detalhes das partidas, armazenando toneladas de dados em um banco de dados SQL Server e aprendendo muito mais do que eu esperava, tanto sobre programação quanto sobre o jogo.
 
-Analysis: The fun part! I’m working on tools to crunch the numbers and find out what separates the best players from the rest. Whether it's champion picks, positioning, or playstyle, I'm on it.
+🚀 A Jornada Até Agora
 
-Iterating and Learning: Every step has been full of surprises. I’ve broken code, fixed it, and broken it again. But every bug is a new lesson, and every fix is a small victory.
+Coleta de Dados: A primeira barreira foi buscar os dados das partidas usando a API da Riot Games. Escrevi scripts em Python que extraem os detalhes das partidas, armazenam em um banco de dados SQL Server e mantêm tudo organizado.
 
-🔧 How It Works
-Fetching Data: The Python script pulls match details from the Riot Games API, focusing on Summoners’ last 20 games (and sometimes more if I’m feeling adventurous).
+Configuração do Banco de Dados: Meu banco de dados agora contém mais de 100.000 linhas de detalhes de partidas, com foco em jogos da liga Diamante. Esta é a base para toda a análise que segue.
 
-Storing Data: The data gets stored in a SQL Server database, neatly organized and ready for analysis.
+Análise: A parte divertida! Estou trabalhando em ferramentas para analisar os números e descobrir o que diferencia os melhores jogadores dos demais. Seja nas escolhas de campeões, posicionamento ou estilo de jogo, estou em busca disso.
 
-Analyzing Data: The analysis phase is where the magic happens. I’m using the data to find patterns, compare stats, and figure out how to help players climb the ladder.
+Iterando e Aprendendo: Cada passo tem sido cheio de surpresas. Já quebrei códigos, consertei e quebrei novamente. Mas cada bug é uma nova lição, e cada correção é uma pequena vitória.
 
-Reporting: Eventually, this will all come together in reports that offer actionable insights for players looking to improve.
+🔧 Como Funciona
 
-💻 Technologies Used
+Coleta de Dados: O script em Python busca os detalhes das partidas a partir da API da Riot Games, focando nos últimos 20 jogos dos Invocadores (e às vezes mais, se eu estiver me sentindo aventureiro).
 
-Python: For fetching and processing the data.
-SQL Server: To store all the match details and keep things organized.
-Riot Games API: The treasure trove of match data.
-GitHub Pages: For sharing the journey and findings with the world.
+Armazenamento de Dados: Os dados são armazenados em um banco de dados SQL Server, organizados e prontos para análise.
 
-🎯 Goals
-Help Players Improve: By providing insights into their gameplay based on real data.
-Learn and Grow: As much a personal learning journey as it is a project.
-Have Fun: Because if you’re not enjoying the process, what’s the point?
+Análise de Dados: A fase de análise é onde a mágica acontece. Estou usando os dados para encontrar padrões, comparar estatísticas e descobrir como ajudar os jogadores a subirem de elo.
 
-🎉 The Adventure Continues
-This project is still very much a work in progress, and I’m loving every second of it. There are plenty more surprises and lessons ahead, and I can’t wait to see where it all leads.
+Relatórios: Eventualmente, tudo isso será reunido em relatórios que oferecem insights acionáveis para jogadores que querem melhorar.
 
-If you’re interested in following along or even contributing, feel free to dive into the code, ask questions, or just reach out!
+💻 Tecnologias Utilizadas
+
+Python: Para buscar e processar os dados.
+SQL Server: Para armazenar todos os detalhes das partidas e manter tudo organizado.
+API da Riot Games: O tesouro de dados das partidas.
+GitHub Pages: Para compartilhar a jornada e os resultados com o mundo.
+🎯 Objetivos
+
+Ajudar os Jogadores a Melhorarem: Fornecendo insights sobre seu desempenho com base em dados reais.
+Aprender e Crescer: Tanto uma jornada de aprendizado pessoal quanto um projeto.
+Divertir-se: Porque se você não está se divertindo no processo, qual é o sentido?
+🎉 A Aventura Continua
+
+Este projeto ainda está em pleno desenvolvimento, e eu estou adorando cada segundo dele. Há muitas outras surpresas e lições pela frente, e mal posso esperar para ver onde tudo isso vai dar.
+
+Se você estiver interessado em acompanhar ou até mesmo contribuir, sinta-se à vontade para mergulhar no código, fazer perguntas ou simplesmente entrar em contato!
