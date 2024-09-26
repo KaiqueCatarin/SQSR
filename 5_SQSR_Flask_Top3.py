@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 import os
 from dotenv import load_dotenv
 
-app = Flask(__name__, template_folder='../Website SQSR')  # Adjust template folder to the root where your HTML files are
+app = Flask(__name__)
 
 # Load environment variables from a .env file
 load_dotenv()
@@ -15,6 +15,10 @@ port = 1433             # Default SQL Server port
 database = 'RiotDB'     # Your database name
 username = 'sqlserver'  # Your SQL Server username
 password = os.getenv('DB_PASSWORD')  # Retrieve password from environment variable
+
+# Check if the password was loaded
+if not password:
+    raise ValueError("Database password not found. Please set the DB_PASSWORD environment variable.")
 
 # Construct the database connection string
 connection_url = (
@@ -88,8 +92,8 @@ def calculate_champion_stats(summoner_name, champions):
     return pd.DataFrame(stats)
 
 # Flask route to display the form and handle user input
-@app.route('/testar_aplicacao', methods=['GET', 'POST'])
-def testar_aplicacao():
+@app.route('/', methods=['GET', 'POST'])
+def index():
     if request.method == 'POST':
         summoner_name = request.form.get('summoner_name')
         
@@ -102,9 +106,9 @@ def testar_aplicacao():
         # Convert the DataFrame to HTML for display
         stats_html = champion_stats.to_html(index=False)
         
-        return render_template('testar_aplicacao.html', summoner_name=summoner_name, stats_html=stats_html)
+        return render_template('index.html', summoner_name=summoner_name, stats_html=stats_html)
     
-    return render_template('testar_aplicacao.html')
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
