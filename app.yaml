@@ -1,17 +1,8 @@
-runtime: python39  # Specifies the Python runtime version
+runtime: python311
 
 handlers:
   - url: /.*
     script: auto
-    secure: always  # Ensures that requests are always made over HTTPS
 
 env_variables:
-  DB_PASSWORD: "admin"  # Replace with your actual database password
-
-instance_class: F2  # Optional, choose an instance class based on your resource needs (F2 is good for medium workloads)
-
-automatic_scaling:
-  target_cpu_utilization: 0.65
-  target_throughput_utilization: 0.75
-  min_instances: 1  # The minimum number of instances to keep running
-  max_instances: 3  # You can adjust this depending on expected traffic
+  DB_PASSWORD: 'admin'
